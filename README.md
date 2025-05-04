@@ -1,6 +1,6 @@
 # collage
 
-A collection of samples from college coursework.
+A collection of samples from college coursework. Made with pure HTML/CSS.
 
 ## armpower
 
