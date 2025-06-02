@@ -17,12 +17,12 @@
 }
 
 :root {
-    --color-primary: #0059b6;
-    --color-primary-dark: #00458e;
-    --color-primary-light: #0078d8;
-    --color-secondary: #0099ff;
-    --color-secondary-dark: #0088f0;
-    --color-secondary-light: #00aaff;
+    --color-primary: #0088dd;
+    --color-primary-dark: #0077bb;
+    --color-primary-light: #0099ff;
+    --color-secondary: #00bbff;
+    --color-secondary-dark: #00aaff;
+    --color-secondary-light: #00ccff;
     --color-tertiary: #d73737;
     --color-tertiary-dark: #d02727;
     --color-tertiary-light: #e04747;
@@ -31,7 +31,7 @@
     --color-accent-light: #ffe0a7;
     --color-contrast-light: #272727;
     --color-contrast-dark: #171717;
-    --font-family-link: "Siglet", Arial, sans;
+    --font-family-link: "Sniglet", Arial, sans;
     --font-family-label: "Source Sans Pro", Arial, sans;
     --font-family-content: "Source Sans Pro", Arial, sans;
     --background-header: url(images/texture-pavement.png); /*Image source: https://hendriklammers.com*/
@@ -270,6 +270,10 @@ nav.sticky ul li a {
     color: var(--color-secondary-dark);
 }
 
+nav.sticky ul li a:active {
+    color: var(--color-accent);
+}
+
 nav.sticky ul li a:hover {
     color: var(--color-accent);
 }
@@ -290,7 +294,7 @@ main section {
     box-shadow: 0px 4px 4px 4px #e0e0e0;
     border-top: 3px solid var(--color-primary-light);
     position: relative;
-    opacity: 0.75;
+    opacity: 0.875;
     z-index: 0;
 }
 
@@ -397,7 +401,6 @@ main ul li {
 }
 
 main a {
-    font-family: var(--font-family-link);
     color: var(--color-secondary-dark);
 }
 
@@ -412,6 +415,7 @@ main .intro p {
 main .intro p#summary {
     text-shadow: 3px 8px 4px #ccc !important;
     font-size: 18px;
+    padding: 4px;
 }
 
 main .intro .choices {
@@ -480,24 +484,23 @@ main .intro .choice .note .decision button:active {
 }
 
 main section.accordionset button {
+    width: 25%;
     opacity: 1 !important;
     text-transform: capitalize;
-    border: 4px outset #999;
+    border: 4px outset var(--color-primary-dark);
     padding: 4px;
     background: var(--color-primary);
     color: #fff;
     font-size: 16px;
+    margin: 0 4px !important;
 }
 
 main section.accordionset button:hover {
-    background: linear-gradient(var(--color-primary-light), var(--color-primary), var(--color-primary-light));
-    border: 4px outset #999;
-    padding: 4px;
+    background: var(--color-primary-light);
 }
 
 main section.accordionset button:active {
-    border: 4px inset #bbb;
-    padding: 4px;
+    border: 4px inset var(--color-primary-light);
     font-size: 15px;
     color: #ddd;
     background: var(--color-primary-dark);
@@ -517,7 +520,7 @@ main form.contact {
 main form.contact input,
 main textarea {
     width: 90%;
-    border: 1px solid #555;
+    border: 1px solid var(--color-contrast-light);
     margin: 2px;
     font-size: 18px;
     padding: 4px 0;
@@ -531,7 +534,7 @@ main textarea:focus {
 
 main form.contact input[type="submit"] {
     opacity: 1 !important;
-    border: 4px outset #999;
+    border: 4px outset var(--color-primary-dark);
     padding: 4px;
     background: var(--color-primary);
     color: #fff;
@@ -543,8 +546,8 @@ main form.contact input[type="submit"]:hover {
 }
 
 main form.contact input[type="submit"]:active {
-    border: 4px inset #bbb;
-    padding: 5px;
+    border: 4px inset var(--color-primary-light);
+    padding: 4.5px;
     font-size: 15px;
     color: #ddd;
     background: var(--color-primary-dark);
@@ -568,7 +571,7 @@ body footer.sticky {
 }
 
 footer input#top {
-    font-family: var(--font-family-link);
+    font-family: Arial;
     font-weight: bold;
     font-size: 20px;
 }
@@ -592,7 +595,7 @@ footer.sticky input[type="submit"]:hover {
 footer.sticky input[type="submit"]:active {
     font-size: 15px;
     background-color: var(--color-contrast-dark);
-    border-bottom: 4px solid #303030;
+    border-bottom: 3px solid #303030;
     color: var(--color-accent-light);
 }
 
